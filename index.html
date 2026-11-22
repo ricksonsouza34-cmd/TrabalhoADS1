@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Notícias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-inner">
+      <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.categorias').classList.toggle('aberta')">☰</button>
+      <a class="logo" href="index.html">Portal <span>Notícias</span></a>
+      <span class="subtitulo">Informação em destaque</span>
+    </div>
+  </header>
+  <nav class="categorias">
+    <a href="#" data-category="Todas">Início</a><a href="#" data-category="Brasil">Brasil</a>
+    <a href="#" data-category="Mundo">Mundo</a><a href="#" data-category="Tecnologia">Tecnologia</a>
+    <a href="#" data-category="Esportes">Esportes</a>
+  </nav>
+  <main class="container">
+    <p class="aviso">Notícias demonstrativas para fins acadêmicos. Os textos abaixo são fictícios.</p>
+    <section class="destaque" id="destaque"></section>
+    <section class="section-head"><h2>Últimas notícias</h2><input id="busca" type="search" placeholder="Buscar notícia..." aria-label="Buscar notícia"></section>
+    <div id="noticias" class="lista-noticias"></div>
+    <p id="mensagem" class="mensagem"></p>
+  </main>
+  <footer><p>Portal Notícias · Projeto acadêmico</p><a href="login.html">Área administrativa</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script><script src="app.js"></script>
+</body>
+</html>
